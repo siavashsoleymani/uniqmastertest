@@ -2,11 +2,11 @@
 
 ### Up and running Documentation
 
-To run this project there three ways:
+To run this project there are three ways:
 
-* With docker based on the Dockerfile that provided on the project
-* Import the project to Intellij and run with the IDE
-* Using Maven
+* With docker, based on the Dockerfile that provided on the project
+* Import the project to Intellij and run with the IDE (Java 11 needed)
+* Using Maven (Java 11 and mvn needed)
 
 ### Guides
 
