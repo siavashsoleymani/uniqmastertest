@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "32acde39-d4e8-42a3-9efd-42bb76495651",
+		"name": "uniqmastertest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orgnizerId\":2,\n    \"topic\":\"QA automation 2\",\n    \"eventType\":\"VIDEO_COURSE\",\n    \"start\":\"2021-04-15T15:55:56.946+00:00\",\n    \"end\":\"2021-04-15T15:55:56.946+00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/event",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscribe to an event",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"audienceId\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/event/3/audience",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"event",
+						"3",
+						"audience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get upcoming events",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/event/audience/1/upcoming",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"event",
+						"audience",
+						"1",
+						"upcoming"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get event for calendar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/event/audience/1?start=2021-03-15 18:14:53.415&end=2021-05-15 18:14:53.415",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"event",
+						"audience",
+						"1"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2021-03-15 18:14:53.415"
+						},
+						{
+							"key": "end",
+							"value": "2021-05-15 18:14:53.415"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
